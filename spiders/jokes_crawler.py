@@ -2,8 +2,8 @@
 import scrapy
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
-import sys
-sys.path.append('/home/oliver/Projects/jokes/jokes/')
+import os, sys
+sys.path.append(os.path.join(sys.path[-1],'jokes'))
 from items import JokesItem
 
 
