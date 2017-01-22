@@ -23,7 +23,7 @@ class JokesCrawlerSpider(CrawlSpider):
         for joke in jokes:
            # print('K', joke)
             item = JokesItem()
-            item['joke'] = joke.xpath('.//p/text()').extract()
+            item['joke'] = joke.xpath('.//p/text()').extract()[0]
             item['url'] = joke.xpath('.//div/a/@href').extract()[0]
             item['topic'] = [a.strip('/') for a in joke.xpath('.//span/a/@href').extract()]
             yield item
