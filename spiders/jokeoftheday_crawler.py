@@ -32,8 +32,9 @@ class JokesCrawlerSpider(CrawlSpider):
             else:
                 text = [a.strip().strip(u'\u201c\u201d') for a in text if not any(w in a.split() for w in neg_list)]
 
-            print(text)
-
-            item['joke'] = ' '.join(text)
-           # print(' '.join(text))
-            yield item
+            if len(text) > 0:
+                item['joke'] = ' '.join(text)
+                print( ' '.join(text))
+                yield item
+            else:
+                pass
