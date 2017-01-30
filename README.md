@@ -10,4 +10,4 @@
 ##### 2.1.1) Problems: - Generated words are readable but misspellings still likely 
 ##### - The content is often i) confusing ii) not funny iii) lacking consistent oneliner properties(e.g. 'Q: What is a ...?' But 'A: ...' is missing)
 ##### -> Corpus too small and generally basic word-relations are not covered (which results in a seemingly random concatenation of words) 
-#### Idea: Use a progressive network approach: First train network on basic text data (e.g. wikipedia) and then add a network extension trained on the oneliner jokes task
+##### Idea: Use a progressive network approach: First train network on basic text data (e.g. wikipedia) and then add a network extension trained on the oneliner jokes task
